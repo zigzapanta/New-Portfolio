@@ -1,0 +1,200 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+/*Navbar*/
+
+
+nav {
+	display: flex;
+	flex-direction: row;
+	background-color: black;
+	align-items: center;
+	justify-content: center;
+	height: 15vh;
+}
+
+
+.nav-options{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+
+}
+
+
+.nav-options p {
+	padding: 1.5em;
+	font-weight: 700;
+	padding-right: 3em;
+}
+
+
+
+
+
+.about-me-button:hover {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+    height: 50%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: rgb(252, 3, 119);
+    animation: glowRed 2s infinite alternate;
+
+}
+
+
+.about-me-button p:hover {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: hotpink;
+	border-radius: 50%;
+	width: 80%;
+	height: 60%;
+
+}
+
+
+@keyframes glowRed {
+    0% {
+        background-color: rgb(252, 3, 119);
+         box-shadow: 0 0 .1em .1em rgba(252, 3, 119,.5);
+        
+    }
+    25% {
+        background-color: rgba(237, 7, 91); 
+        box-shadow: 0 0 .2em .2em rgba(237, 7, 91,.5);
+    }
+    50% {
+        background-color: rgba(237, 7, 38); 
+        box-shadow: 0 0 .35em .35em rgba(237, 7, 38,.5);
+    }
+    100% {
+        background-color: rgb(252, 5, 5);
+         box-shadow: 0 0 .5em .5em rgba(252, 5, 5,.5);
+    }
+}
+
+
+
+
+
+
+
+.education-button:hover {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+    height: 70%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: green;
+
+}
+
+.education-button:hover:before{
+	content: " ";
+	width: 60%;
+	background-color: yellow;
+	animation: changeShape .7s infinite alternate, moveLeft 2s infinite alternate;
+	z-index: 2;
+
+}
+
+
+
+@keyframes changeShape {
+    0% {
+        clip-path: polygon(53% 0, 80% 10%, 65% 36%, 73% 57%, 57% 74%, 50% 100%, 46% 83%, 37% 71%, 43% 50%, 53% 29%);
+
+    }
+    25% {
+        clip-path: polygon(53% 0, 70% 20%, 79% 39%, 66% 57%, 53% 73%, 50% 100%, 46% 83%, 45% 60%, 29% 42%, 57% 26%);
+
+
+    }
+    50% {
+        clip-path: polygon(53% 0, 52% 25%, 79% 39%, 66% 53%, 56% 74%, 50% 100%, 46% 83%, 46% 56%, 60% 46%, 35% 41%);
+
+
+
+    }
+    75% {
+       clip-path: polygon(53% 0, 62% 20%, 79% 39%, 49% 47%, 59% 73%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
+
+
+	}
+    100% {
+        clip-path: polygon(53% 0, 62% 20%, 40% 35%, 49% 47%, 49% 69%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
+
+
+}
+
+}
+
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(550%);
+    }
+}
+
+
+
+
+.projects-button:hover {
+    animation: morph 4s infinite alternate;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 48% 57% 71% 93% / 81% 62% 100% 72%; 
+        background-color: rgb(66, 66, 189);
+    }
+    25%{
+    	border-radius: 86% 57% 30% 93% / 81% 96% 100% 72%;
+    	background-color: rgb(37, 219, 98); 
+    }
+    50%{
+    	border-radius: 51% 14% 12% 31% / 45% 20% 17% 14% ;
+    	background-color: rgb(37, 219, 195);
+
+    }
+    100% {
+        border-radius: 0% 100% 0% 45% / 87% 100% 0% 14%;
+        background-color: rgb(247, 197, 47);
+    }
+}
+
+
+
+
+
+/*End of Navbar*/
+
+/*Start of About Me*/
+
+.about-me{
+	background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+	height: 85vh;
+}
