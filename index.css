@@ -23,6 +23,9 @@ nav {
 	align-items: center;
 	justify-content: center;
 	height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 
@@ -162,6 +165,109 @@ nav {
     }
 
 }
+
+
+
+.about-me-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+
+.about-me-main {
+    display: flex;
+    align-items: center;
+    gap:  2em;
+}
+
+.about-me-title{
+    color: white;
+}
+
+
+.about-me-title h1 {
+    font-size: 2em;
+}
+
+.about-me-title h2 {
+    font-weight: 400 ;
+}
+
+.about-me-main img {
+    height: 13em;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+
+.dp-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    
+    position: relative;
+}
+
+
+.dp-area::after{
+    content: " ";
+     height: 14em;
+    width: 14em;
+    border-radius: 50%;
+    /*background: linear-gradient(111deg, rgba(255,255,255,1) 12%, rgba(218,0,255,1) 38%);*/
+    /*background: linear-gradient(111deg, rgba(255,255,255,1) 12%, rgba(165,0,193,1) 38%);*/
+    background: linear-gradient(50deg, rgba(255,255,255,1) 10%, rgba(0,0,0,1) 31%);
+    position: absolute;
+    animation: rotateBorder 5s infinite linear;
+
+}
+
+@keyframes rotateBorder {
+    from {
+        transform: rotate(0deg); 
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.about-description {
+    display: flex;
+    width: 50%;
+    margin-top: 3em;
+}
+
+.about-description{
+    color: white;
+    font-size: 1.3;
+}
+
+
+
+/*End of About me*/
+
+/*Start of education*/
+
+.education {
+    height: 85vh;
+    background-color: white;
+}
+
+.education h1 {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+}
+
 
 
 
