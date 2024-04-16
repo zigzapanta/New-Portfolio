@@ -4,6 +4,19 @@
 	<meta charset="utf-8">
 	<title>New Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<script src="./data.js"></script>
+	<script>
+    function changeCard(school) {
+        var image = document.getElementById("school-image");
+        var schoolName = document.getElementById("school-name");
+        var schoolDescription = document.getElementById("school-description");
+
+        image.src = school.image;
+        schoolName.textContent = school.name;
+        schoolDescription.textContent = school.description;
+    }
+</script>
 </head>
 <body>
 
@@ -52,9 +65,25 @@
 </section>
 
 <section class="education">
-	<h1>
-		EDUCATION
-	</h1>
+	<h1> EDUCATION </h1>
+
+	<div class="education-main">
+		<div class="education-card-area">
+			<img src="./images/profile pic.jpg" id="school-image">
+			<p id="school-name"> School Name </p>
+			<p id="school-description"> Description </p>
+		</div>
+
+		<div class="school-logos">
+			<img src="./images/zuitt-logo.png"onClick="changeCard(zuitt)">
+			<img src="./images/rivan-logo.png" onClick="changeCard(rivan)">
+			<img src="./images/ust-logo.png"onClick="changeCard(ust)">
+			<img src="./images/dbti-logo.png" onClick="changeCard(dbti)">
+			
+		</div>
+
+
+	</div>
 	
 </section>
 
