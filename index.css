@@ -47,116 +47,16 @@ nav {
 
 
 .about-me-button:hover {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-    height: 50%;
-    width: 80%;
-    border-radius: 50%;
-    background-color: rgb(252, 3, 119);
-    animation: glowRed 2s infinite alternate;
+    animation: morph 4s infinite alternate;
+    cursor: pointer;
 
 }
-
-
-.about-me-button p:hover {
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color: hotpink;
-	border-radius: 50%;
-	width: 80%;
-	height: 60%;
-
-}
-
-
-@keyframes glowRed {
-    0% {
-        background-color: rgb(252, 3, 119);
-         box-shadow: 0 0 .1em .1em rgba(252, 3, 119,.5);
-        
-    }
-    25% {
-        background-color: rgba(237, 7, 91); 
-        box-shadow: 0 0 .2em .2em rgba(237, 7, 91,.5);
-    }
-    50% {
-        background-color: rgba(237, 7, 38); 
-        box-shadow: 0 0 .35em .35em rgba(237, 7, 38,.5);
-    }
-    100% {
-        background-color: rgb(252, 5, 5);
-         box-shadow: 0 0 .5em .5em rgba(252, 5, 5,.5);
-    }
-}
-
-
-
-
-
 
 
 .education-button:hover {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-    height: 70%;
-    width: 80%;
-    border-radius: 50%;
-    background-color: green;
+    animation: morph 4s infinite alternate;
+    cursor: pointer;
 
-}
-
-.education-button:hover:before{
-	content: " ";
-	width: 60%;
-	background-color: yellow;
-	animation: changeShape .7s infinite alternate, moveLeft 2s infinite alternate;
-	z-index: 2;
-
-}
-
-
-
-@keyframes changeShape {
-    0% {
-        clip-path: polygon(53% 0, 80% 10%, 65% 36%, 73% 57%, 57% 74%, 50% 100%, 46% 83%, 37% 71%, 43% 50%, 53% 29%);
-
-    }
-    25% {
-        clip-path: polygon(53% 0, 70% 20%, 79% 39%, 66% 57%, 53% 73%, 50% 100%, 46% 83%, 45% 60%, 29% 42%, 57% 26%);
-
-
-    }
-    50% {
-        clip-path: polygon(53% 0, 52% 25%, 79% 39%, 66% 53%, 56% 74%, 50% 100%, 46% 83%, 46% 56%, 60% 46%, 35% 41%);
-
-
-
-    }
-    75% {
-       clip-path: polygon(53% 0, 62% 20%, 79% 39%, 49% 47%, 59% 73%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
-
-
-	}
-    100% {
-        clip-path: polygon(53% 0, 62% 20%, 40% 35%, 49% 47%, 49% 69%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
-
-
-}
-
-}
-
-
-@keyframes moveLeft {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(550%);
-    }
 }
 
 
@@ -164,6 +64,7 @@ nav {
 
 .projects-button:hover {
     animation: morph 4s infinite alternate;
+    cursor: pointer;
 }
 
 @keyframes morph {
@@ -197,4 +98,182 @@ nav {
 .about-me{
 	background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 	height: 85vh;
+    display: flex;
+    flex-direction: column;
+
 }
+
+.about-me-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.about-me-top h1 {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+
+.about-me-top img {
+    height: 2.5em;
+    width: auto;
+
+}
+
+
+.controller{
+        animation: moveY 2s infinite alternate;
+}
+
+
+@keyframes moveY {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(50%);
+    }
+}
+
+
+.laptop {
+    /* filter: drop-shadow(0 -5px 10px rgba(255, 255, 0, 0.5));*/
+    animation: screenGlow 3s infinite alternate ;
+}
+
+
+@keyframes screenGlow {
+     0% {
+        
+         filter: drop-shadow(0 -5px 10px rgba(150, 123, 241, 0));
+
+   
+    }
+    100% {
+        
+         filter: drop-shadow(0 -5px 10px rgba(150, 123, 241, 0.8));
+
+   
+    }
+
+}
+
+
+
+
+/*For future reference
+
+
+.about-me-button:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: rgb(252, 3, 119);
+    animation: glowRed 2s infinite alternate;
+
+}
+
+
+.about-me-button p:hover {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: hotpink;
+    border-radius: 50%;
+    width: 80%;
+    height: 60%;
+
+}
+
+
+@keyframes glowRed {
+    0% {
+        background-color: rgb(252, 3, 119);
+         box-shadow: 0 0 .1em .1em rgba(252, 3, 119,.5);
+
+    }
+    25% {
+        background-color: rgba(237, 7, 91); 
+        box-shadow: 0 0 .2em .2em rgba(237, 7, 91,.5);
+    }
+    50% {
+        background-color: rgba(237, 7, 38); 
+        box-shadow: 0 0 .35em .35em rgba(237, 7, 38,.5);
+    }
+    100% {
+        background-color: rgb(252, 5, 5);
+         box-shadow: 0 0 .5em .5em rgba(252, 5, 5,.5);
+    }
+}
+
+
+.education-button:hover {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: green;
+
+}
+
+.education-button:hover:before{
+    content: " ";
+    width: 60%;
+    background-color: yellow;
+    animation: changeShape .7s infinite alternate, moveLeft 2s infinite alternate;
+    z-index: 2;
+
+}
+
+*/
+/*
+@keyframes changeShape {
+    0% {
+        clip-path: polygon(53% 0, 80% 10%, 65% 36%, 73% 57%, 57% 74%, 50% 100%, 46% 83%, 37% 71%, 43% 50%, 53% 29%);
+
+    }
+    25% {
+        clip-path: polygon(53% 0, 70% 20%, 79% 39%, 66% 57%, 53% 73%, 50% 100%, 46% 83%, 45% 60%, 29% 42%, 57% 26%);
+
+
+    }
+    50% {
+        clip-path: polygon(53% 0, 52% 25%, 79% 39%, 66% 53%, 56% 74%, 50% 100%, 46% 83%, 46% 56%, 60% 46%, 35% 41%);
+
+
+         }
+    75% {
+       clip-path: polygon(53% 0, 62% 20%, 79% 39%, 49% 47%, 59% 73%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
+
+
+    }
+    100% {
+        clip-path: polygon(53% 0, 62% 20%, 40% 35%, 49% 47%, 49% 69%, 50% 100%, 46% 83%, 39% 65%, 35% 60%, 34% 26%);
+
+
+}
+
+}
+
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(550%);
+    }
+}
+
+*/
