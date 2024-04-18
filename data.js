@@ -3,7 +3,7 @@
 const dbti ={
 	image: "./images/dbti-logo.png",
 	name:"Don Bosco Technical Institute Makati",
-	description:"I fulfilled my elementary and highschool education from 2003 to 2013. The curriculum focused on the usual subjects but had a larger empahsis in technical subjects during the highchool years. Subjects such as computer, drafting, mechanical and automotive were tackled during those years. I specialized in automotive technology during my junior and senior years "
+	description:"I fulfilled my elementary and highschool education from 2003 to 2013. The curriculum focused on the usual subjects but had a larger empahsis in technical subjects during the highchool years. Subjects such as computer, drafting, mechanical and automotive were tackled during those years. I specialized in automotive technology during my junior and senior year."
 
 }
 
@@ -11,7 +11,7 @@ const dbti ={
 const ust ={
 	image: "./images/ust-logo.png",
 	name:"University Of Santo Tomas",
-	description:"The course i took was B.S. Occupational therapy from 2013-2018. The course focuses on the analysis of tasks and client factors in order to help achieve the optimal level of functioning for people with physical and/or cognitive disabilites"
+	description:"The course i took was B.S. Occupational therapy from 2013-2018. The course focuses on the analysis of tasks and client factors in order to help achieve the optimal level of functioning for people with physical and/or cognitive disabilites."
 
 }
 
@@ -32,5 +32,25 @@ const zuitt ={
 
 }
 
+
+function changeCard(school) {
+        let image = document.getElementById("school-image");
+        let schoolName = document.getElementById("school-name");
+        let schoolDescription = document.getElementById("school-description");
+
+        image.src = school.image;
+        schoolName.textContent = school.name;
+        schoolDescription.textContent = school.description;
+
+        image.classList.add("animate-fadeIn")
+        schoolName.classList.add("animate-fadeIn");
+    	schoolDescription.classList.add("animate-fadeIn");
+
+    	setTimeout(function() {
+    	image.classList.remove("animate-fadeIn")
+        schoolName.classList.remove("animate-fadeIn");
+        schoolDescription.classList.remove("animate-fadeIn");
+    	}, 500); 
+    }
 
 

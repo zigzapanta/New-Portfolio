@@ -4,38 +4,35 @@
 	<meta charset="utf-8">
 	<title>New Portfolio</title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-	<script src="./data.js"></script>
-	<script>
-    function changeCard(school) {
-        var image = document.getElementById("school-image");
-        var schoolName = document.getElementById("school-name");
-        var schoolDescription = document.getElementById("school-description");
-
-        image.src = school.image;
-        schoolName.textContent = school.name;
-        schoolDescription.textContent = school.description;
-    }
-</script>
 </head>
 <body>
 
 <nav>
 
 <div class="nav-options">
-	<div class="about-me-button">
-		<p>ABOUT ME</p>
-	</div>
-	<div class="education-button">
-		<p>EDUCATION</p>
-	</div>
-	<div class="projects-button">
-		<p>PROJECTS</p>
-	</div>
+	<a href="#about-me">
+		<div class="about-me-button">
+			<p>ABOUT ME</p>
+		</div>
+	</a>
+	<a href="#education">
+		<div class="education-button">
+			<p>EDUCATION</p>
+		</div>
+	</a>
+	<a href="#projects">
+		<div class="projects-button">
+			<p>PROJECTS</p>
+		</div>
+	</a>
 </div>
 </nav>
 
-<section class="about-me">
+<section class="about-me" id="about-me">
 	<div class="about-me-top">
 		<img src="./images/controller.png"class="controller"/>
 		<h1>ABOUT ME</h1>
@@ -64,15 +61,15 @@
 	
 </section>
 
-<section class="education">
+<section class="education" id="education">
 	<h1> EDUCATION </h1>
 
 	<div class="education-main">
 		<div class="education-card-area">
-			<img src="./images/profile pic.jpg" id="school-image">
+			<img src="./images/zuitt-logo.png" id="school-image">
 			<div class="school-texts">
-				<p id="school-name"> School Name </p>
-				<p id="school-description"> Description </p>
+				<p id="school-name"> Zuitt Coding Bootcamp </p>
+				<p id="school-description"> The bootcamp covered front end, back end, and Fullstack development. We used HTML, CSS, Javascript and, the MERN stack in order to learn programming and create websites. </p>
 			</div>
 
 		</div>
@@ -89,6 +86,18 @@
 	</div>
 	
 </section>
+
+
+<section class="projects" id="projects">
+	<h1>PROJECTS</h1>
+	<div class="project-area" id="project-area">
+	
+	</div>
+	
+</section>
+<script src="./projects.js"></script>
+<script src="./data.js"></script>
+
 
 </body>
 </html>

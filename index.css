@@ -2,9 +2,12 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+    font-family: "Poppins", sans-serif
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -45,7 +48,11 @@ nav {
 	padding-right: 3em;
 }
 
+.nav-options a {
+    text-decoration: none;
+    color: white;
 
+}
 
 
 
@@ -89,9 +96,6 @@ nav {
         background-color: rgb(247, 197, 47);
     }
 }
-
-
-
 
 
 /*End of Navbar*/
@@ -173,7 +177,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5em;
+    margin-top: .3em;
+    margin-bottom: 3em;
 }
 
 
@@ -185,14 +190,17 @@ nav {
 
 .about-me-title{
     color: white;
+    margin-top: auto;
+    margin-bottom: 2em;
 }
 
 
 .about-me-title h1 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .about-me-title h2 {
+    font-size: 2em;
     font-weight: 400 ;
 }
 
@@ -221,6 +229,7 @@ nav {
      height: 14em;
     width: 14em;
     border-radius: 50%;
+    margin-top: auto;
     /*background: linear-gradient(111deg, rgba(255,255,255,1) 12%, rgba(218,0,255,1) 38%);*/
     /*background: linear-gradient(111deg, rgba(255,255,255,1) 12%, rgba(165,0,193,1) 38%);*/
     background: linear-gradient(50deg, rgba(255,255,255,1) 10%, rgba(0,0,0,1) 31%);
@@ -247,7 +256,7 @@ nav {
 
 .about-description{
     color: white;
-    font-size: 1.3;
+    font-size: 1.3em;
 }
 
 
@@ -257,7 +266,7 @@ nav {
 /*Start of education*/
 
 .education {
-    height: 85vh;
+    height: 100vh;
     background-color: white;
     align-items: center;
     justify-content: center;
@@ -294,10 +303,24 @@ nav {
     width: 90%;
 }
 
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .school-texts{
     margin:  auto   ;
     margin-top: 0;
+
 }
 
 
@@ -305,12 +328,14 @@ nav {
     color: black;
     font-size: 3em;
     font-weight: 700;
+    
 }
 
 #school-description {
     color: black;
     font-size: 2em;
     font-weight: 500;
+    
 }
 
 
@@ -321,7 +346,8 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 9em;
-    margin-top: 8em;
+    margin-top: 4em;
+    margin-bottom: 3em;
     
 }
 
@@ -356,8 +382,66 @@ nav {
 
 /*Start of Projects*/
 
+.projects {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.projects h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+    margin-top: 1em;
+}
+
+.project-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
 
 
+.project-card {
+    margin-top: 4em;
+    animation: slideIn linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 20em;
+}
+
+.project-name {
+    font-size: 2em;
+    font-weight: 700;
+    
+}
+
+.project-description {
+    font-size: 1.5em;
+    font-weight: 550;
+    width: 50vw;
+    margin-top: 1em;
+
+}
+
+.project-image {
+    height: 50vh;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
 
 /*For future reference
 
